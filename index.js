@@ -10,6 +10,11 @@ app.get('/api', (req, res) => {
   res.send('TEAM NAKED API');
 })
 
+app.get('/api/:collection', (req, res) => {
+  res.send('Proper format: http://teamnaked.pink:3000/api/[COLLECTION_NAME]/1');
+})
+
+
 app.get('/api/pixelhands/:id', (req, res) => {
   const id = req.params.id;
   res.json({ 
